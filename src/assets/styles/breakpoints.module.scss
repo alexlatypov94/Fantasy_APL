@@ -1,0 +1,32 @@
+$max-content-width: 1224px;
+$max-content-admin-width: 1448px;
+$max-wrapper-width: 100%;
+
+$breakpoints: (
+  "mobile":       320px,
+  "tablet":       600px,
+  "desktop":      960px
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+//Example:
+
+/*
+.site-header {
+    padding: 20px;
+    @include mq('tablet') {
+        padding-top: 40px;
+    }
+}
+ */

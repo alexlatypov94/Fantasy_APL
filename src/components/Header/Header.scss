@@ -1,0 +1,28 @@
+@import './../../assets/styles/fonts.module.scss';
+@import './../../assets/styles/colors.module.scss';
+
+header {
+  width: 100%;
+  height: $sizeX10;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $sizeX2;
+  background: $purple135;
+  .header-logo {
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+
+  .header-nav-list {
+    display: flex;
+    list-style: none;
+    li {
+      margin: 0 $sizeX2;
+      font-size: $size18;
+    }
+  }
+}
