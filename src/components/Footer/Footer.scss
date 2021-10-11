@@ -1,0 +1,19 @@
+@import './../../assets/styles/fonts.module.scss';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background: rgb(99, 190, 186);
+  font-size: $sizeX2;
+  padding: $sizeX2;
+
+  .developers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a:first-child {
+      margin-bottom: $sizeX1;
+    }
+  }
+}
